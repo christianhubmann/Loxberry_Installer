@@ -8,6 +8,7 @@ TARGET_PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
 LBHOME="/opt/loxberry"
 PHPVER_PROD=7.4
 PHPVER_TEST=8.2
+BRANCH=master
 
 #
 ########################################################################
@@ -232,7 +233,7 @@ mkdir -p $LBHOME
 cd $LBHOME
 
 if [ ! -z $BRANCH ]; then
-	git clone https://github.com/mschlenstedt/Loxberry.git -b $BRANCH
+	git clone https://github.com/christianhubmann/Loxberry.git -b $BRANCH
 	if [ ! -d $LBHOME/Loxberry ]; then
 		FAIL "Could not download LoxBerry sources.\n"
 		exit 1
